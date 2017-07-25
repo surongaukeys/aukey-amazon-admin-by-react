@@ -1,14 +1,9 @@
 # react-admin
 react-admin system solution
 
-### 最下方增加版本更新日志😁
 
 ### 前言
-> 网上react后台管理开源免费的完整版项目比较少，所以利用空余时间集成了一个版本出来，已放到GitHub
-  启动和打包的时间都稍长，请耐心等待两分钟
 
-- [GitHub地址](https://github.com/yezihaohao/react-admin)
-- [预览地址](http://cheng_haohao.oschina.io/reactadmin/#/app/dashboard/index)(还没做响应式，不建议手机预览😕)
 
 ### 依赖模块
 <span style="color: rgb(184,49,47);">项目是用create-react-app创建的，主要还是列出新加的功能依赖包</span>
@@ -145,11 +140,6 @@ npm run build
 ```
 
 ### 结尾
-该项目会不定时更新，后续时间会添加更多的模块
-
-若有问题，可加QQ群264591039与我交流
-
-如果对你有帮助，给个star哟~~❤️❤️❤️❤️
 
 ### 更新日志
 #### 2017-07-08
