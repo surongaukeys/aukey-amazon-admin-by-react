@@ -17,13 +17,13 @@ class Drags extends React.Component {
         }
     };
     onStart = () => {
-        this.setState({activeDrags: ++this.state.activeDrags});
+        this.setState({ activeDrags: ++this.state.activeDrags });
     };
     onStop = () => {
-        this.setState({activeDrags: --this.state.activeDrags});
+        this.setState({ activeDrags: --this.state.activeDrags });
     };
     handleDrag = (e, ui) => {
-        const {x, y} = this.state.deltaPosition;
+        const { x, y } = this.state.deltaPosition;
         this.setState({
             deltaPosition: {
                 x: x + ui.deltaX,
@@ -32,8 +32,8 @@ class Drags extends React.Component {
         });
     };
     render() {
-        const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
-        const {deltaPosition} = this.state;
+        const dragHandlers = { onStart: this.onStart, onStop: this.onStop };
+        const { deltaPosition } = this.state;
         return (
             <div className="gutter-example button-demo">
                 <BreadcrumbCustom first="UI" second="拖拽" />
@@ -98,7 +98,7 @@ class Drags extends React.Component {
                     </Col>
                     <Col className="gutter-row" span={6}>
                         <div className="gutter-box">
-                            <Draggable bounds={{top: -100, left: -100, right: 100, bottom: 100}} zIndex={5} {...dragHandlers}>
+                            <Draggable bounds={{ top: -100, left: -100, right: 100, bottom: 100 }} zIndex={5} {...dragHandlers}>
                                 <Card bordered={false} className={'dragDemo'}>
                                     <div>I can only be moved 100px in any direction.</div>
                                 </Card>
@@ -115,6 +115,4 @@ class Drags extends React.Component {
         )
     }
 }
-
-
 export default Drags;

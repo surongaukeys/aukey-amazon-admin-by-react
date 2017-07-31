@@ -6,7 +6,7 @@ import { Menu, Icon, Layout } from 'antd';
 import screenfull from 'screenfull';
 import { gitOauthToken, gitOauthInfo } from '../axios';
 import { queryString } from '../utils';
-import avater from '../style/imgs/b1.jpg';
+import avater from '../style/imgs/user-head.png';
 const { Header } = Layout;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -17,22 +17,6 @@ class HeaderCustom extends Component {
     };
     componentDidMount() {
         const QueryString = queryString();
-        // if (QueryString.hasOwnProperty('code')) {
-        //     console.log(QueryString);
-        //     const _user = JSON.parse(localStorage.getItem('user'));
-        //     !_user && gitOauthToken(QueryString.code).then(res => {
-        //         console.log(res);
-        //         gitOauthInfo(res.access_token).then(info => {
-        //             this.setState({
-        //                 user: info
-        //             });
-        //             localStorage.setItem('user', JSON.stringify(info));
-        //         });
-        //     });
-        //     _user && this.setState({
-        //         user: _user
-        //     });
-        // }
         const _user = JSON.parse(localStorage.getItem('user')) || '测试';
         if (!_user && QueryString.hasOwnProperty('code')) {
             gitOauthToken(QueryString.code).then(res => {
@@ -77,8 +61,8 @@ class HeaderCustom extends Component {
                             <Menu.Item key="setting:2">个人信息</Menu.Item>
                         </MenuItemGroup>
                         <MenuItemGroup title="设置中心">
-                            <Menu.Item key="setting:3">个人设置</Menu.Item>
-                            <Menu.Item key="setting:4">系统设置</Menu.Item>
+                            <Menu.Item key="setting:3">修改密码</Menu.Item>
+                            <Menu.Item key="setting:4">退出登录</Menu.Item>
                         </MenuItemGroup>
                     </SubMenu>
                 </Menu>
